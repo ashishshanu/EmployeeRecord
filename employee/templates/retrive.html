@@ -1,0 +1,17 @@
+<h1>--------- Employee Record ---------</h1>
+{% for data in dataset %}
+<h3>{{data.id}}</h3>
+<h2> {{data.employee_name}} : {{data.employee_age}} </h2>
+
+<form action= "{% url 'detailview' data.id %}"  method = "GET">
+<input type = "submit" value = "View This">
+</form>
+<form action= "{% url 'update' data.id %}"  method = "GET">
+<input type = "submit" value = "Update This">
+</form>
+<form action= "{% url 'delete' data.id %}"  method = "GET">
+<input type = "submit" value = "Delete This">
+</form>
+
+<hr>
+{% endfor %}

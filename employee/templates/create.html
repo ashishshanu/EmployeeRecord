@@ -1,0 +1,11 @@
+<h1> Employee Form </h1>
+<form method = "post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type = "submit" value = "Save">
+
+<hr/>
+</form>
+<form action= "{% url 'retrive' %}" method = "GET">
+<input type = "submit" value = "List OF Employees">
+</form>
